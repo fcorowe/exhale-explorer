@@ -1,0 +1,14 @@
+---
+pagetitle: "EXHALE: static population exposure to air pollution, 2021–22"
+title: ""
+---
+
+```{=html}
+<iframe
+  class="explorer-frame"
+  src="preview/hasp-static-exposure.html"
+  title="EXHALE interactive explorer of static population exposure to air pollution across the United Kingdom, 2021–22"
+  loading="eager">
+  <a href="preview/hasp-static-exposure.html">Open the EXHALE explorer</a>
+</iframe>
+```

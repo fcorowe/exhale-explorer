@@ -1,0 +1,19 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - index.qmd
+  resources:
+    - preview/hasp-static-exposure.html
+
+website:
+  title: "EXHALE exposure explorer"
+  site-url: https://fcorowe.github.io/exhale-explorer/
+  search: false
+
+format:
+  html:
+    theme: none
+    minimal: true
+    toc: false
+    css: styles.css

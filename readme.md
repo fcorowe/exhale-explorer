@@ -10,13 +10,22 @@ Open [the self-contained HTML](preview/hasp-static-exposure.html) in a modern br
 
 This repository is independent of [DataProduct-EXHALE](https://github.com/Imago-SDRUK/DataProduct-EXHALE), which maintains the wider data-product workflows. No changes to that repository are required for deployment here.
 
-## GitHub Pages deployment
+## Quarto website and GitHub Pages
 
-The [deployment workflow](.github/workflows/deploy-pages.yml) publishes on pushes to `main` and can also be run manually from the Actions tab. In repository **Settings → Pages**, select **GitHub Actions** as the source.
+The website is a Quarto project, configured in [_quarto.yml](_quarto.yml). [index.qmd](index.qmd) is the homepage source. It displays the existing explorer in a full-window frame so the map, controls and typography retain their current appearance. The map application remains in its self-contained HTML; this is a Quarto website shell rather than a rewrite of the map as an R htmlwidget.
 
-The workflow copies `preview/hasp-static-exposure.html` into the deployment artifact as `index.html`. Only that standalone page and `.nojekyll` are published. The repository does not store a duplicate of the large HTML at its root. No R build or dataset download runs on GitHub.
+Preview and render from the repository root:
 
-To publish a revised explorer, replace `preview/hasp-static-exposure.html`, update the corresponding validation/provenance records, commit and push to `main`.
+```sh
+quarto preview
+quarto render
+```
+
+Quarto writes the site to `_site/`, including `index.html`, the site stylesheet and the unchanged explorer HTML under `preview/`. The `_site` output and `.quarto` cache are excluded from Git. Rendering the website does not require R or the source datasets.
+
+The [deployment workflow](.github/workflows/deploy-pages.yml) renders the Quarto project and publishes `_site` on pushes to `main`. It can also be run manually from the Actions tab. In repository **Settings → Pages**, select **GitHub Actions** as the source.
+
+Edit `index.qmd`, `styles.css` or `_quarto.yml` to change the surrounding website. To update the map application itself, rebuild or replace `preview/hasp-static-exposure.html`, update the corresponding validation/provenance records, commit and push to `main`. The standalone HTML remains available for direct download and offline sharing.
 
 ## Optional local rebuild
 
@@ -39,4 +48,4 @@ The four vulnerability formulas retain the original whole-percent rounding. Reve
 
 Boundary attribution for ONS, Scottish Government and NISRA, Natural Earth lake attribution, and Leaflet/font licences are embedded in the HTML. [Resource provenance](resources/sources.json) records downloaded asset URLs and checksums. Source data-product licensing is retained in [LICENSE](LICENSE).
 
-The [build manifest](preview/build-manifest.json), [standalone checks](preview/self-contained-validation.json) and [vulnerability checks](preview/vulnerability-validation_23-10-2026.json) document the supplied release. Validation includes all 9,448 areas, 24 pollutant/measure combinations and 226,752 vulnerability percentage values. The new Pages deployment publishes these existing results without changing the data or calculating additional measures.
+The [build manifest](preview/build-manifest.json), [standalone checks](preview/self-contained-validation.json) and [vulnerability checks](preview/vulnerability-validation_23-10-2026.json) document the supplied release. Validation includes all 9,448 areas, 24 pollutant/measure combinations and 226,752 vulnerability percentage values. The Quarto/Pages deployment publishes these existing results without changing the data or calculating additional measures.

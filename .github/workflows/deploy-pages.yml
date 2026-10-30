@@ -25,10 +25,13 @@ jobs:
         uses: actions/checkout@v4
       - name: Configure Pages
         uses: actions/configure-pages@v5
-      - name: Prepare standalone site
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: '1.9.38'
+      - name: Render Quarto site
         run: |
-          mkdir -p _site
-          cp preview/hasp-static-exposure.html _site/index.html
+          quarto render
           touch _site/.nojekyll
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
