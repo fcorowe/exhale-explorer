@@ -2,7 +2,7 @@
 
 Interactive maps of static population exposure to air pollution across the United Kingdom, 2021–22. The explorer covers Benzene, NO2, O3, PM2.5, PM10 and SO2 across 9,448 census areas. It includes the four original age-specific vulnerability percentages, calculated from the supplied exposed and total population counts.
 
-**Website:** https://imago-sdruk.github.io/exhale-explorer/
+**Website:** https://fcorowe.github.io/exhale-explorer/
 
 ## View or share the explorer
 
