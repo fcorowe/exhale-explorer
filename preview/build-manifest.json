@@ -1,0 +1,564 @@
+{
+  "built_utc": "2026-10-23 06:32:47 UTC",
+  "upstream_script": "code/HASP-Static-Indicators/04-Producing-Visualisation-Outputs/HASP-Data-Product-Interactive-Dashboard.R",
+  "upstream_sha256": "c5ea28b8d38080f5eab555e51e5dbe9552d4a83fcb0c354b6460e0a017a2618f",
+  "indicator_inputs": {
+    "Benzene": {
+      "path": "outputs/HASP-Data-Product/Consolidated-Datasets/Benzene/UK-Upper-Geogs/UK-Upper-Geogs-Consolidated-Dataset-Benzene-2021-&-2022.csv",
+      "sha256": "736efc5724820643dcdb67fa9ac9aa4492feba24f65c8fd271b919f662f257a6",
+      "rows": 9448,
+      "matched_boundaries": 9448,
+      "missing_indicator_values": {
+        "area_weighted_mean_Benzene": 0,
+        "PWE_to_Benzene": 0,
+        "above_European_Commission_threshold": 0
+      }
+    },
+    "NO2": {
+      "path": "outputs/HASP-Data-Product/Consolidated-Datasets/NO2/UK-Upper-Geogs/UK-Upper-Geogs-Consolidated-Dataset-NO2-2021-&-2022.csv",
+      "sha256": "2b4b801afa74181e0bc75c4cdfc31dae6f9ecd09fbfa072262c83246414a0de6",
+      "rows": 9448,
+      "matched_boundaries": 9448,
+      "missing_indicator_values": {
+        "area_weighted_mean_NO2": 0,
+        "PWE_to_NO2": 0,
+        "above_WHO_threshold": 0
+      }
+    },
+    "PM2.5": {
+      "path": "outputs/HASP-Data-Product/Consolidated-Datasets/PM2.5/UK-Upper-Geogs/UK-Upper-Geogs-Consolidated-Dataset-PM2.5-2021-&-2022.csv",
+      "sha256": "29479bfd11e3ff96422beaae6954f0f7a8851accb8a60feacc0a174b187b73aa",
+      "rows": 9448,
+      "matched_boundaries": 9448,
+      "missing_indicator_values": {
+        "area_weighted_mean_PM2.5": 0,
+        "PWE_to_PM2.5": 0,
+        "above_WHO_threshold": 0
+      }
+    },
+    "PM10": {
+      "path": "outputs/HASP-Data-Product/Consolidated-Datasets/PM10/UK-Upper-Geogs/UK-Upper-Geogs-Consolidated-Dataset-PM10-2021-&-2022.csv",
+      "sha256": "1ab4c54ddc23c274d9d815a2d944b7368b9f54e5c416cc54e5dd3bb881205d44",
+      "rows": 9448,
+      "matched_boundaries": 9448,
+      "missing_indicator_values": {
+        "area_weighted_mean_PM10": 0,
+        "PWE_to_PM10": 0,
+        "above_WHO_threshold": 0
+      }
+    },
+    "SO2": {
+      "path": "outputs/HASP-Data-Product/Consolidated-Datasets/SO2/UK-Upper-Geogs/UK-Upper-Geogs-Consolidated-Dataset-SO2-2021-&-2022.csv",
+      "sha256": "975eee90c77d10d68cbe0c46aef6917ce118cde7fdf66eeede209940dd4e3ee6",
+      "rows": 9448,
+      "matched_boundaries": 9448,
+      "missing_indicator_values": {
+        "area_weighted_mean_SO2": 0,
+        "PWE_to_SO2": 0,
+        "above_DEFRA_threshold": 0
+      }
+    },
+    "O3": {
+      "path": "outputs/HASP-Data-Product/Consolidated-Datasets/O3/UK-Upper-Geogs/UK-Upper-Geogs-Consolidated-Dataset-O3-2021-&-2022.csv",
+      "sha256": "a2b6d6b76a2f548bf6c8d5701dd2148a5c14cb8a06db03f49a145772d031f3bc",
+      "rows": 9448,
+      "matched_boundaries": 9448,
+      "missing_indicator_values": {
+        "area_weighted_mean_O3": 0,
+        "at_least_1_day_exposed_to_O3_above_120_ug": 0
+      }
+    }
+  },
+  "boundary_sources": {
+    "ew-msoa-2021.geojson": {
+      "urls": [
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Middle_layer_Super_Output_Areas_December_2021_Boundaries_EW_BGC_V3/FeatureServer/0/query?where=1%3D1&outFields=MSOA21CD%2CMSOA21NM&f=geojson&outSR=4326&geometryPrecision=5&maxAllowableOffset=0.0005&resultOffset=0&resultRecordCount=1000&orderByFields=FID",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Middle_layer_Super_Output_Areas_December_2021_Boundaries_EW_BGC_V3/FeatureServer/0/query?where=1%3D1&outFields=MSOA21CD%2CMSOA21NM&f=geojson&outSR=4326&geometryPrecision=5&maxAllowableOffset=0.0005&resultOffset=1000&resultRecordCount=1000&orderByFields=FID",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Middle_layer_Super_Output_Areas_December_2021_Boundaries_EW_BGC_V3/FeatureServer/0/query?where=1%3D1&outFields=MSOA21CD%2CMSOA21NM&f=geojson&outSR=4326&geometryPrecision=5&maxAllowableOffset=0.0005&resultOffset=2000&resultRecordCount=1000&orderByFields=FID",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Middle_layer_Super_Output_Areas_December_2021_Boundaries_EW_BGC_V3/FeatureServer/0/query?where=1%3D1&outFields=MSOA21CD%2CMSOA21NM&f=geojson&outSR=4326&geometryPrecision=5&maxAllowableOffset=0.0005&resultOffset=3000&resultRecordCount=1000&orderByFields=FID",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Middle_layer_Super_Output_Areas_December_2021_Boundaries_EW_BGC_V3/FeatureServer/0/query?where=1%3D1&outFields=MSOA21CD%2CMSOA21NM&f=geojson&outSR=4326&geometryPrecision=5&maxAllowableOffset=0.0005&resultOffset=4000&resultRecordCount=1000&orderByFields=FID",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Middle_layer_Super_Output_Areas_December_2021_Boundaries_EW_BGC_V3/FeatureServer/0/query?where=1%3D1&outFields=MSOA21CD%2CMSOA21NM&f=geojson&outSR=4326&geometryPrecision=5&maxAllowableOffset=0.0005&resultOffset=5000&resultRecordCount=1000&orderByFields=FID",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Middle_layer_Super_Output_Areas_December_2021_Boundaries_EW_BGC_V3/FeatureServer/0/query?where=1%3D1&outFields=MSOA21CD%2CMSOA21NM&f=geojson&outSR=4326&geometryPrecision=5&maxAllowableOffset=0.0005&resultOffset=6000&resultRecordCount=1000&orderByFields=FID",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Middle_layer_Super_Output_Areas_December_2021_Boundaries_EW_BGC_V3/FeatureServer/0/query?where=1%3D1&outFields=MSOA21CD%2CMSOA21NM&f=geojson&outSR=4326&geometryPrecision=5&maxAllowableOffset=0.0005&resultOffset=7000&resultRecordCount=1000&orderByFields=FID"
+      ],
+      "retrieved_utc": "2026-10-22T11:15:53.541469+00:00",
+      "sha256": "2d952bb183653fccaf8f7069e22de73632881b5eacbe05674e3d1263d59bb5c9",
+      "bytes": 11979100
+    },
+    "scotland-iz-2022.geojson": {
+      "urls": [
+        "https://services-eu1.arcgis.com/4QkhM5AS8YOlkb6T/ArcGIS/rest/services/2022_Data_Zones_and_Intermediate_Zones/FeatureServer/1/query?where=1%3D1&outFields=IZCode%2CIZName&f=geojson&outSR=4326&geometryPrecision=5&maxAllowableOffset=0.0005&resultOffset=0&resultRecordCount=1000&orderByFields=OBJECTID",
+        "https://services-eu1.arcgis.com/4QkhM5AS8YOlkb6T/ArcGIS/rest/services/2022_Data_Zones_and_Intermediate_Zones/FeatureServer/1/query?where=1%3D1&outFields=IZCode%2CIZName&f=geojson&outSR=4326&geometryPrecision=5&maxAllowableOffset=0.0005&resultOffset=1000&resultRecordCount=1000&orderByFields=OBJECTID"
+      ],
+      "retrieved_utc": "2026-10-22T11:16:25.459934+00:00",
+      "sha256": "01327e001616af3e6eb5d4e9e5f7fda752fc645d3757517d4747236fc8b0ecf7",
+      "bytes": 4643703
+    },
+    "ni-sdz-2021.geojson": {
+      "urls": [
+        "https://www.nisra.gov.uk/files/nisra/publications/geography-sdz2021-geojson.zip"
+      ],
+      "retrieved_utc": "2026-10-22T11:16:28.806059+00:00",
+      "sha256": "1af2e3891d99c544e44af71717aaadd04856f04bdb7618946c6d886d292515d0",
+      "bytes": 59010856
+    },
+    "leaflet.js": {
+      "urls": [
+        "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      ],
+      "retrieved_utc": "2026-10-22T11:16:28.919707+00:00",
+      "sha256": "db49d009c841f5ca34a888c96511ae936fd9f5533e90d8b2c4d57596f4e5641a",
+      "bytes": 147552
+    },
+    "leaflet.css": {
+      "urls": [
+        "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      ],
+      "retrieved_utc": "2026-10-22T11:16:28.975523+00:00",
+      "sha256": "a7837102824184820dfa198d1ebcd109ff6d0ff9a2672a074b9a1b4d147d04c6",
+      "bytes": 14806
+    },
+    "leaflet-license.txt": {
+      "urls": [
+        "https://unpkg.com/leaflet@1.9.4/LICENSE"
+      ],
+      "retrieved_utc": "2026-10-22T11:16:29.028828+00:00",
+      "sha256": "53e8dc25862014e4324741ca18fbe3611e11d42ef69f59f86ea8c5389647d4cb",
+      "bytes": 1395
+    },
+    "ew-msoa-2021-full.geojson": {
+      "urls": [
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Middle_layer_Super_Output_Areas_December_2021_Boundaries_EW_BGC_V3/FeatureServer/0/query?where=1%3D1&outFields=MSOA21CD%2CMSOA21NM&f=geojson&outSR=4326&geometryPrecision=8&resultOffset=0&resultRecordCount=1000&orderByFields=FID",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Middle_layer_Super_Output_Areas_December_2021_Boundaries_EW_BGC_V3/FeatureServer/0/query?where=1%3D1&outFields=MSOA21CD%2CMSOA21NM&f=geojson&outSR=4326&geometryPrecision=8&resultOffset=1000&resultRecordCount=1000&orderByFields=FID",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Middle_layer_Super_Output_Areas_December_2021_Boundaries_EW_BGC_V3/FeatureServer/0/query?where=1%3D1&outFields=MSOA21CD%2CMSOA21NM&f=geojson&outSR=4326&geometryPrecision=8&resultOffset=2000&resultRecordCount=1000&orderByFields=FID",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Middle_layer_Super_Output_Areas_December_2021_Boundaries_EW_BGC_V3/FeatureServer/0/query?where=1%3D1&outFields=MSOA21CD%2CMSOA21NM&f=geojson&outSR=4326&geometryPrecision=8&resultOffset=3000&resultRecordCount=1000&orderByFields=FID",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Middle_layer_Super_Output_Areas_December_2021_Boundaries_EW_BGC_V3/FeatureServer/0/query?where=1%3D1&outFields=MSOA21CD%2CMSOA21NM&f=geojson&outSR=4326&geometryPrecision=8&resultOffset=4000&resultRecordCount=1000&orderByFields=FID",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Middle_layer_Super_Output_Areas_December_2021_Boundaries_EW_BGC_V3/FeatureServer/0/query?where=1%3D1&outFields=MSOA21CD%2CMSOA21NM&f=geojson&outSR=4326&geometryPrecision=8&resultOffset=5000&resultRecordCount=1000&orderByFields=FID",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Middle_layer_Super_Output_Areas_December_2021_Boundaries_EW_BGC_V3/FeatureServer/0/query?where=1%3D1&outFields=MSOA21CD%2CMSOA21NM&f=geojson&outSR=4326&geometryPrecision=8&resultOffset=6000&resultRecordCount=1000&orderByFields=FID",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Middle_layer_Super_Output_Areas_December_2021_Boundaries_EW_BGC_V3/FeatureServer/0/query?where=1%3D1&outFields=MSOA21CD%2CMSOA21NM&f=geojson&outSR=4326&geometryPrecision=8&resultOffset=7000&resultRecordCount=1000&orderByFields=FID"
+      ],
+      "retrieved_utc": "2026-10-22T11:42:53.569736+00:00",
+      "sha256": "5b4335868a8eea2ac917a808d6d582ec3bb25ddabba734b2c75a876f9bbc4a59",
+      "bytes": 29804155
+    },
+    "scotland-iz-2022-full.geojson": {
+      "urls": [
+        "https://services-eu1.arcgis.com/4QkhM5AS8YOlkb6T/ArcGIS/rest/services/2022_Data_Zones_and_Intermediate_Zones/FeatureServer/1/query?where=1%3D1&outFields=IZCode%2CIZName&f=geojson&outSR=4326&geometryPrecision=8&resultOffset=0&resultRecordCount=1000&orderByFields=OBJECTID",
+        "https://services-eu1.arcgis.com/4QkhM5AS8YOlkb6T/ArcGIS/rest/services/2022_Data_Zones_and_Intermediate_Zones/FeatureServer/1/query?where=1%3D1&outFields=IZCode%2CIZName&f=geojson&outSR=4326&geometryPrecision=8&resultOffset=1000&resultRecordCount=1000&orderByFields=OBJECTID"
+      ],
+      "retrieved_utc": "2026-10-22T11:46:19.997486+00:00",
+      "sha256": "09b941c9e826f4a54964b0c0ff34a693a87160bf5f842d8cf3081023b16054d1",
+      "bytes": 88936443
+    },
+    "ne_10m_lakes.zip": {
+      "urls": [
+        "https://naturalearth.s3.amazonaws.com/10m_physical/ne_10m_lakes.zip"
+      ],
+      "retrieved_utc": "2026-10-22T11:46:22.439585+00:00",
+      "sha256": "0803a06f9c3cb4671d89b68c48b142aad9366ba40f665245e12a913fbc61722a",
+      "bytes": 2349685
+    },
+    "ne_10m_lakes.cpg": {
+      "urls": [
+        "https://naturalearth.s3.amazonaws.com/10m_physical/ne_10m_lakes.zip"
+      ],
+      "retrieved_utc": "2026-10-22T11:46:22.442936+00:00",
+      "sha256": "3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824",
+      "bytes": 5
+    },
+    "ne_10m_lakes.dbf": {
+      "urls": [
+        "https://naturalearth.s3.amazonaws.com/10m_physical/ne_10m_lakes.zip"
+      ],
+      "retrieved_utc": "2026-10-22T11:46:22.448236+00:00",
+      "sha256": "0edaa87f76c2221c986f0796ce0b54b1c418e9032afba46f8e302edc41193495",
+      "bytes": 9993116
+    },
+    "ne_10m_lakes.prj": {
+      "urls": [
+        "https://naturalearth.s3.amazonaws.com/10m_physical/ne_10m_lakes.zip"
+      ],
+      "retrieved_utc": "2026-10-22T11:46:22.456118+00:00",
+      "sha256": "a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4",
+      "bytes": 145
+    },
+    "ne_10m_lakes.shp": {
+      "urls": [
+        "https://naturalearth.s3.amazonaws.com/10m_physical/ne_10m_lakes.zip"
+      ],
+      "retrieved_utc": "2026-10-22T11:46:22.464159+00:00",
+      "sha256": "11064fa55ed91b56a0d86733643c1a5bfcc137fdf044e83f471978a5b86617e1",
+      "bytes": 2682580
+    },
+    "ne_10m_lakes.shx": {
+      "urls": [
+        "https://naturalearth.s3.amazonaws.com/10m_physical/ne_10m_lakes.zip"
+      ],
+      "retrieved_utc": "2026-10-22T11:46:22.466557+00:00",
+      "sha256": "a11ffb02e862b6c4ec8c015e6e0c70502f21bc71dcd79312b8dbc676f7e4c557",
+      "bytes": 10940
+    },
+    "ne_10m_lakes_europe.zip": {
+      "urls": [
+        "https://naturalearth.s3.amazonaws.com/10m_physical/ne_10m_lakes_europe.zip"
+      ],
+      "retrieved_utc": "2026-10-22T11:46:23.907206+00:00",
+      "sha256": "c0b1f0da4dce6af3b27c49b3ed11a664d801ff3d140ca5b9814e7e85a35c1de1",
+      "bytes": 185079
+    },
+    "ne_10m_lakes_europe.cpg": {
+      "urls": [
+        "https://naturalearth.s3.amazonaws.com/10m_physical/ne_10m_lakes_europe.zip"
+      ],
+      "retrieved_utc": "2026-10-22T11:46:23.909083+00:00",
+      "sha256": "3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824",
+      "bytes": 5
+    },
+    "ne_10m_lakes_europe.dbf": {
+      "urls": [
+        "https://naturalearth.s3.amazonaws.com/10m_physical/ne_10m_lakes_europe.zip"
+      ],
+      "retrieved_utc": "2026-10-22T11:46:23.914352+00:00",
+      "sha256": "4452b0bb2505cec9d90fa3045dd9b17130a7659f8b7d9da5820fe5fe2eaf72ab",
+      "bytes": 5000684
+    },
+    "ne_10m_lakes_europe.prj": {
+      "urls": [
+        "https://naturalearth.s3.amazonaws.com/10m_physical/ne_10m_lakes_europe.zip"
+      ],
+      "retrieved_utc": "2026-10-22T11:46:23.918041+00:00",
+      "sha256": "a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4",
+      "bytes": 145
+    },
+    "ne_10m_lakes_europe.shp": {
+      "urls": [
+        "https://naturalearth.s3.amazonaws.com/10m_physical/ne_10m_lakes_europe.zip"
+      ],
+      "retrieved_utc": "2026-10-22T11:46:23.919400+00:00",
+      "sha256": "c06f25e541a6e1775133e0efa05b2c02d8858fe9012c2aa276a344258cf94854",
+      "bytes": 331032
+    },
+    "ne_10m_lakes_europe.shx": {
+      "urls": [
+        "https://naturalearth.s3.amazonaws.com/10m_physical/ne_10m_lakes_europe.zip"
+      ],
+      "retrieved_utc": "2026-10-22T11:46:23.921437+00:00",
+      "sha256": "34466465a8dd70b922d6c0bb152b9352e3d8b3876a05e8c4c0351f15af969ffa",
+      "bytes": 6236
+    },
+    "ew-oa-msoa-2021.csv": {
+      "urls": [
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&returnCountOnly=true&f=json",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=0&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=1000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=2000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=3000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=4000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=5000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=6000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=7000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=8000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=9000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=10000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=11000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=12000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=13000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=14000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=15000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=16000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=17000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=18000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=19000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=20000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=21000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=22000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=23000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=24000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=25000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=26000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=27000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=28000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=29000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=30000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=31000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=32000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=33000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=34000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=35000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=36000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=37000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=38000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=39000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=40000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=41000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=42000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=43000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=44000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=45000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=46000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=47000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=48000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=49000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=50000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=51000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=52000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=53000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=54000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=55000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=56000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=57000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=58000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=59000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=60000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=61000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=62000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=63000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=64000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=65000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=66000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=67000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=68000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=69000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=70000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=71000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=72000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=73000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=74000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=75000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=76000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=77000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=78000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=79000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=80000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=81000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=82000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=83000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=84000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=85000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=86000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=87000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=88000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=89000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=90000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=91000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=92000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=93000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=94000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=95000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=96000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=97000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=98000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=99000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=100000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=101000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=102000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=103000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=104000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=105000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=106000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=107000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=108000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=109000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=110000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=111000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=112000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=113000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=114000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=115000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=116000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=117000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=118000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=119000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=120000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=121000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=122000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=123000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=124000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=125000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=126000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=127000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=128000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=129000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=130000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=131000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=132000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=133000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=134000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=135000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=136000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=137000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=138000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=139000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=140000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=141000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=142000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=143000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=144000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=145000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=146000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=147000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=148000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=149000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=150000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=151000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=152000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=153000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=154000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=155000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=156000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=157000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=158000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=159000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=160000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=161000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=162000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=163000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=164000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=165000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=166000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=167000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=168000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=169000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=170000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=171000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=172000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=173000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=174000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=175000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=176000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=177000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=178000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=179000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=180000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=181000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=182000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=183000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=184000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=185000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=186000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=187000&resultRecordCount=1000",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA_LSOA_MSOA_EW_DEC_2021_LU_v3/FeatureServer/0/query?where=1%3D1&f=json&outFields=OA21CD%2CMSOA21CD&returnGeometry=false&orderByFields=ObjectId&resultOffset=188000&resultRecordCount=1000"
+      ],
+      "retrieved_utc": "2026-10-22T12:29:08.175474+00:00",
+      "sha256": "de702efd020aaf00723827a6bda8b489989c2f79f18ef348e11c89723e2fc76e",
+      "bytes": 3966497
+    },
+    "scotland-oa-dz-iz-2022.zip": {
+      "urls": [
+        "https://nrscotland.gov.uk/media/iz3evrqt/oa22_dz22_iz22.zip"
+      ],
+      "retrieved_utc": "2026-10-22T12:29:08.588916+00:00",
+      "sha256": "3565794561306479b6c618aaa3915f1f29fdce31ee798fdcdab45f880a7ba4aa",
+      "bytes": 237841
+    },
+    "ni-dz-sdz-2021.xlsx": {
+      "urls": [
+        "https://www.nisra.gov.uk/files/nisra/documents/2025-04/geography-data-zone-and-super-data-zone-lookups-v3.xlsx"
+      ],
+      "retrieved_utc": "2026-10-22T12:29:08.776694+00:00",
+      "sha256": "8e2e1f6daaddd2f5b6887ccab1bf9d0bf179f6d0d2ba60ef8e0ebb495a3e1999",
+      "bytes": 603543
+    },
+    "figtree.woff2": {
+      "urls": [
+        "https://cdn.jsdelivr.net/fontsource/fonts/figtree:vf@latest/latin-wght-normal.woff2"
+      ],
+      "retrieved_utc": "2026-10-22T13:31:56.954327+00:00",
+      "sha256": "4ba7d3d096695818fe0686be4f1e82c6b05134e18a22260336130335027462dd",
+      "bytes": 20156
+    },
+    "space-grotesk.woff2": {
+      "urls": [
+        "https://cdn.jsdelivr.net/fontsource/fonts/space-grotesk:vf@latest/latin-wght-normal.woff2"
+      ],
+      "retrieved_utc": "2026-10-22T13:31:57.016227+00:00",
+      "sha256": "0640890476fc1198ab4de571fb658de443c4d85b66466ec09534a8737ab1ce9d",
+      "bytes": 22288
+    },
+    "figtree-license.txt": {
+      "urls": [
+        "https://cdn.jsdelivr.net/npm/@fontsource-variable/figtree@latest/LICENSE"
+      ],
+      "retrieved_utc": "2026-10-22T13:31:59.129105+00:00",
+      "sha256": "ee23e6c84000126692e112ff067b456470493349f993ceaa8b4d3766dd6fad5d",
+      "bytes": 4498
+    },
+    "space-grotesk-license.txt": {
+      "urls": [
+        "https://cdn.jsdelivr.net/npm/@fontsource-variable/space-grotesk@latest/LICENSE"
+      ],
+      "retrieved_utc": "2026-10-22T13:32:00.307850+00:00",
+      "sha256": "18a4de52385f6b988782639d5d0cc1326e5a8c2de9a7f01d7b20d9aedcc60943",
+      "bytes": 4401
+    },
+    "layers.png": {
+      "urls": [
+        "https://unpkg.com/leaflet@1.9.4/dist/images/layers.png"
+      ],
+      "retrieved_utc": "2026-10-22T13:32:00.400385+00:00",
+      "sha256": "1dbbe9d028e292f36fcba8f8b3a28d5e8932754fc2215b9ac69e4cdecf5107c6",
+      "bytes": 696
+    },
+    "layers-2x.png": {
+      "urls": [
+        "https://unpkg.com/leaflet@1.9.4/dist/images/layers-2x.png"
+      ],
+      "retrieved_utc": "2026-10-22T13:32:00.504977+00:00",
+      "sha256": "066daca850d8ffbef007af00b06eac0015728dee279c51f3cb6c716df7c42edf",
+      "bytes": 1259
+    },
+    "marker-icon.png": {
+      "urls": [
+        "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png"
+      ],
+      "retrieved_utc": "2026-10-22T13:32:00.591458+00:00",
+      "sha256": "574c3a5cca85f4114085b6841596d62f00d7c892c7b03f28cbfa301deb1dc437",
+      "bytes": 1466
+    },
+    "marker-icon-2x.png": {
+      "urls": [
+        "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png"
+      ],
+      "retrieved_utc": "2026-10-22T13:32:00.672528+00:00",
+      "sha256": "00179c4c1ee830d3a108412ae0d294f55776cfeb085c60129a39aa6fc4ae2528",
+      "bytes": 2464
+    },
+    "marker-shadow.png": {
+      "urls": [
+        "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png"
+      ],
+      "retrieved_utc": "2026-10-22T13:32:00.753791+00:00",
+      "sha256": "264f5c640339f042dd729062cfc04c17f8ea0f29882b538e3848ed8f10edb4da",
+      "bytes": 618
+    }
+  },
+  "vulnerability_measures": "Four original percentage formulas restored using supplied upper-geography counts; whole-percent rounding",
+  "self_contained": true,
+  "external_runtime_dependencies": [],
+  "sequential_palette": "Identical reversed cividis for continuous exposure, quantile ranks and vulnerability percentages",
+  "geography_count": 9448,
+  "title": "Exposure to Hazards using Activity, Location and Environment (EXHALE) indicators: Static population exposure to air pollution across the United Kingdom, 2021-22",
+  "geography_summary": "Geography: Census 2021 Middle Super Output Areas for England and Wales; 2022 Intermediate Zones for Scotland; 2021 Super Data Zones for Northern Ireland.",
+  "heading_style": "BoI Imago Figtree Variable; responsive 26\u201342px; weight 700",
+  "geometry_type": "MultiPolygon only; non-area repair fragments removed",
+  "polygon_strokes": "1.2-pixel fill-matched round edges; no contrasting borders",
+  "zoom_simplification": "Disabled (smoothFactor = 0) to preserve shared edges",
+  "area_identification": "Native sticky hover tooltip; no sidebar readout",
+  "topology": {
+    "fingerprint": "e60788cb923f76a052a3c65fb08f4ac3c5bf1845ef9a81526cee2c9056871779",
+    "mapshaper": "0.7.95",
+    "interval_m": 25,
+    "snap_m": 0.01,
+    "gap_fill_m": 0,
+    "cleaning": "none; shared-arc simplification preserves small areas",
+    "output_decimals": 7
+  },
+  "lakes": {
+    "count": 14,
+    "source": "Natural Earth 1:10m lakes and Europe supplement"
+  },
+  "output_sha256": "9865012b2bc662e54caafd7713a2be2654f7058c4e3cc2b51e15627b6bd77f88",
+  "vulnerability_labels": "Short labels shared by dropdown, legend and popup; age-group and all-resident denominators distinguished",
+  "help_note": "User-supplied description with denominator explanation and Imago/HASP catalogue reference",
+  "title_layout": "Explicit line break immediately before Static"
+}

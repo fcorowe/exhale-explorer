@@ -1,0 +1,20 @@
+[
+  {
+    "city": "London",
+    "uncovered_before_km2": 25.2203,
+    "uncovered_after_km2": 9.9302,
+    "reduction_percent": 60.6263
+  },
+  {
+    "city": "Birmingham",
+    "uncovered_before_km2": 8.1665,
+    "uncovered_after_km2": 0,
+    "reduction_percent": 100
+  },
+  {
+    "city": "Belfast",
+    "uncovered_before_km2": 60.1737,
+    "uncovered_after_km2": 52.8744,
+    "reduction_percent": 12.1304
+  }
+]

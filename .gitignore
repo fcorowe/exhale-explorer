@@ -1,0 +1,11 @@
+# Local caches and installed dependencies
+.DS_Store
+Thumbs.db
+.Rhistory
+.RData
+tools/node_modules/
+resources/*
+!resources/sources.json
+!resources/topology-build.json
+_site/
+.env

@@ -1,0 +1,45 @@
+{
+  "javascript_syntax": "passed",
+  "embedded_values_vs_source_csvs": "passed within upstream 2-decimal rounding",
+  "pollutants": [
+    "Benzene",
+    "NO2",
+    "PM2.5",
+    "PM10",
+    "SO2",
+    "O3"
+  ],
+  "geographies_by_country": {
+    "England": 6856,
+    "Wales": 408,
+    "Scotland": 1334,
+    "Northern Ireland": 850
+  },
+  "vulnerability_control": "Enabled: four original measures for all six pollutants",
+  "browser_interaction_test": "not performed: browser tool blocks file URLs",
+  "polygon_geometry": "9448 nonempty MultiPolygon features; all codes retained",
+  "area_outlines": "1.2-pixel fill-matched round edges; no white strokes",
+  "indicator_data_vs_previous_build": "Compared against updated source CSVs within original display rounding",
+  "output_sha256": "9865012b2bc662e54caafd7713a2be2654f7058c4e3cc2b51e15627b6bd77f88",
+  "water_overlay": {
+    "features": 14,
+    "Neagh_and_both_Erne_lakes": "present",
+    "style": "blue; separate pane; non-interactive"
+  },
+  "gap_checks": "gap-checks.json (uncovered areas include genuine water/coastline)",
+  "zoom_simplification": "disabled (smoothFactor=0)",
+  "hover_identification": "Native sticky tooltip retained; sidebar readout removed",
+  "header": "Exact requested title and geography wording; BoI Figtree; responsive 26\u201342px",
+  "sequential_palette": "Identical reversed cividis for continuous exposure, quantile ranks and vulnerability percentages",
+  "vulnerability_measures": "Original whole-percent formulas, using supplied upper-geography exposed and total counts",
+  "area_identification": "Native sticky hover tooltip; no sidebar readout",
+  "implementation": "Refinements implemented directly in original dashboard R script; local wrapper supplies inputs and paths",
+  "self_contained": true,
+  "embedded_assets": "Data, geometry, Leaflet JS/CSS/images, both fonts and asset licences",
+  "external_runtime_dependencies": [],
+  "percentage_values_checked": 226752,
+  "map_update_logic": "All 24 pollutant/measure combinations passed",
+  "vulnerability_labels": "Short labels shared by dropdown, legend and popup; age-group and all-resident denominators distinguished",
+  "help_note": "User-supplied description with denominator explanation and Imago/HASP catalogue reference",
+  "title_layout": "Explicit line break immediately before Static"
+}

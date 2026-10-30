@@ -1,0 +1,7 @@
+{
+  "repository": "https://github.com/Imago-SDRUK/DataProduct-EXHALE",
+  "commit": "4fe90b94ea6305deee3cd895de82c8a526a6bf1a",
+  "original_path": "code/HASP-Static-Indicators/04-Producing-Visualisation-Outputs/HASP-Data-Product-Interactive-Dashboard.R",
+  "snapshot_sha256": "c5ea28b8d38080f5eab555e51e5dbe9552d4a83fcb0c354b6460e0a017a2618f",
+  "purpose": "Rendering-source snapshot accompanying the supplied self-contained HTML. CSV inputs and downloaded resources are not published here."
+}

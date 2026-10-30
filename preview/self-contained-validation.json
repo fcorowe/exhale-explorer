@@ -1,0 +1,21 @@
+{
+  "self_contained": true,
+  "external_html_asset_references": [],
+  "css_asset_urls": "All embedded data URIs",
+  "fonts": "Both WOFF2 fonts embedded",
+  "licences": "Leaflet, Figtree and Space Grotesk embedded",
+  "javascript_syntax": "passed",
+  "browser_offline_interaction_test": "not performed: browser tool blocks file URLs",
+  "output_sha256": "9865012b2bc662e54caafd7713a2be2654f7058c4e3cc2b51e15627b6bd77f88",
+  "bytes": 36563397,
+  "vulnerability_control": "Enabled: four original measures for all six pollutants",
+  "vulnerability_measures": "Original whole-percent formulas, using supplied upper-geography exposed and total counts",
+  "percentage_values_checked": 226752,
+  "map_update_logic": "All 24 pollutant/measure combinations passed",
+  "external_runtime_dependencies": [],
+  "indicator_data_vs_previous_build": "Compared against updated source CSVs within original display rounding",
+  "sequential_palette": "Identical reversed cividis for continuous exposure, quantile ranks and vulnerability percentages",
+  "vulnerability_labels": "Short labels shared by dropdown, legend and popup; age-group and all-resident denominators distinguished",
+  "help_note": "User-supplied description with denominator explanation and Imago/HASP catalogue reference",
+  "title_layout": "Explicit line break immediately before Static"
+}

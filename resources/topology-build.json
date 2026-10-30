@@ -1,0 +1,9 @@
+{
+  "fingerprint": "e60788cb923f76a052a3c65fb08f4ac3c5bf1845ef9a81526cee2c9056871779",
+  "mapshaper": "0.7.95",
+  "interval_m": 25,
+  "snap_m": 0.01,
+  "gap_fill_m": 0,
+  "cleaning": "none; shared-arc simplification preserves small areas",
+  "output_decimals": 7
+}
