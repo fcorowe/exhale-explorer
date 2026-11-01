@@ -5,9 +5,11 @@ project:
     - index.qmd
   resources:
     - preview/hasp-static-exposure.html
+    - assets/Imago-logo.png
 
 website:
   title: "EXHALE exposure explorer"
+  favicon: assets/Imago-logo.png
   site-url: https://fcorowe.github.io/exhale-explorer/
   search: false
 

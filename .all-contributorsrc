@@ -1,0 +1,15 @@
+{
+  "projectName": "exhale-explorer",
+  "projectOwner": "fcorowe",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "repo": "https://github.com/fcorowe/exhale-explorer",
+  "files": [
+    "readme.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "contributors": [],
+  "contributorsPerLine": 7,
+  "badgeTemplate": "flat"
+}

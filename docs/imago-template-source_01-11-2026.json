@@ -1,0 +1,35 @@
+{
+  "template": "https://github.com/Imago-SDRUK/Template",
+  "commit": "f77f97c4a4ee05c73b3f3d4e1d62fd641246e277",
+  "prepared": "01-11-2026",
+  "files": {
+    "CODE_OF_CONDUCT.md": {
+      "source_sha256": "650811b62120e8986090133900ae1b5ef89c4868967d99e48c7170917a36fb24",
+      "use": "copied unchanged"
+    },
+    "CONTRIBUTING.md": {
+      "source_sha256": "9f1e8ea724facbde2f7eb4448039cb7fab4c1465f1dc35c3fd6c25b6a4b86c54",
+      "use": "adapted for exhale-explorer"
+    },
+    "LICENSE": {
+      "source_sha256": "d4ae319112dfa9bd45c080363ad4bc44e2857ced585599145db1978097c531ba",
+      "use": "copied unchanged"
+    },
+    "assets/Imago-logo.png": {
+      "source_sha256": "aee9844e9d8a0cd2c2535030e69c3244b113fcb47473cf6db76d230c1ad7c277",
+      "use": "copied unchanged"
+    },
+    ".github/ISSUE_TEMPLATE/ISSUE_TEMPLATE.md": {
+      "source_sha256": "46f59aacb18884364aa6aa5775b3d5e46a15bd8d87240cd26405d53cc79509db",
+      "use": "adapted for exhale-explorer"
+    },
+    ".github/pull_request_template.md": {
+      "source_sha256": "0173872be66b6f8d095124bb04fd501d0738d1e830e4238c14f77f59edec75ac",
+      "use": "adapted for exhale-explorer"
+    },
+    ".all-contributorsrc": {
+      "source_sha256": "8c90c741536268e2310580195ab8bf33871d9b88ba1163d6d53398302c4e7253",
+      "use": "adapted for exhale-explorer"
+    }
+  }
+}

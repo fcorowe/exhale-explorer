@@ -1,3 +1,5 @@
+<img src="assets/Imago-logo.png" alt="Imago Data Service for Imagery" width="300"/>
+
 # EXHALE exposure explorer
 
 Interactive maps of static population exposure to air pollution across the United Kingdom, 2021–22. The explorer covers Benzene, NO2, O3, PM2.5, PM10 and SO2 across 9,448 census areas. It includes the four original age-specific vulnerability percentages, calculated from the supplied exposed and total population counts.
@@ -9,6 +11,8 @@ Interactive maps of static population exposure to air pollution across the Unite
 Open [the self-contained HTML](preview/hasp-static-exposure.html) in a modern browser. This approximately 37 MB file embeds the indicator values, geographic boundaries, water overlay, Leaflet library, icons and fonts. It works offline without sibling files, CSVs, R or Node.js.
 
 This repository is independent of [DataProduct-EXHALE](https://github.com/Imago-SDRUK/DataProduct-EXHALE), which maintains the wider data-product workflows. No changes to that repository are required for deployment here.
+
+The repository is prepared for handover to Imago using the [Imago repository template](https://github.com/Imago-SDRUK/Template). It currently remains under `fcorowe`; the [handover checklist](docs/imago-handover_01-11-2026.md) records the ownership, access and Pages settings to update when Imago accepts the transfer.
 
 ## Quarto website and GitHub Pages
 
@@ -43,6 +47,28 @@ Rscript build-explorer.R
 R requires `sf`, `dplyr`, `jsonlite`, `viridisLite` and `digest`. Python uses its standard library. Node.js runs the Mapshaper version pinned in `tools/package-lock.json`. Downloads and `node_modules` are local caches excluded from Git. The rendering source is preserved in [source/dashboard.R](source/dashboard.R), with its origin recorded in [source/provenance.json](source/provenance.json).
 
 The four vulnerability formulas retain the original whole-percent rounding. Reversed cividis is used consistently for exposure and vulnerability values. Popup labels, descriptive text and the explicit title break are preserved in the supplied HTML.
+
+## Contributing and community
+
+Contributions to the code, documentation, design and accessibility are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) for the fork, branch, review and validation practices, and follow the [Imago Code of Conduct](CODE_OF_CONDUCT.md).
+
+Use the issue templates for bug reports and feature requests, and complete the pull-request template when submitting changes. The repository includes the Imago template's All Contributors configuration; a maintainer must enable the app before bot commands can update the contributor table.
+
+### Acknowledging contributors
+
+After a contribution is merged, request recognition using the process in [CONTRIBUTING.md](CONTRIBUTING.md#contributor-recognition). The contributor table below is reserved for this repository's contributors; names from the template are not copied automatically.
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+## Licence
+
+This repository follows the [Imago template's dual licence](LICENSE): **MIT** for software, and **Creative Commons Attribution 4.0 International (CC BY 4.0)** for documentation, data and other non-code content. Third-party libraries, fonts, boundaries and other assets retain their existing licences and attribution.
 
 ## Attribution and validation
 
